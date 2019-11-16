@@ -1,4 +1,4 @@
-package com.company;
+package com.example.flashcardz.utils;
 
 public class Queue<E> {
 
