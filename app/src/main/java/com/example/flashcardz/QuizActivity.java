@@ -25,7 +25,7 @@ public class QuizActivity extends AppCompatActivity {
     private Button mButton_C;
     private Button mButton_D;
     private FloatingActionButton fab;
-//    private TextView mScoreboard;
+    private TextView mScoreboard;
 
     // Helper variables.
     private int correctAnswers, questionsPlayed;
@@ -43,7 +43,7 @@ public class QuizActivity extends AppCompatActivity {
         mButton_C = findViewById(R.id.button_3);
         mButton_D = findViewById(R.id.button_4);
         fab = findViewById(R.id.fab);
-//        mScoreboard = findViewById(R.id.scoreboard_text_view);
+        mScoreboard = findViewById(R.id.scoreboard_text_view);
 
         // Get Intent.
         Intent intent = getIntent();
@@ -74,6 +74,7 @@ public class QuizActivity extends AppCompatActivity {
             toast.show();
         }
         fab.setVisibility(View.VISIBLE);
+        mScoreboard.setText(String.format("Score: %d/%d", correctAnswers, questionsPlayed));
         setButtonAnswer();
     }
 
@@ -159,6 +160,7 @@ public class QuizActivity extends AppCompatActivity {
             mButton_B.setText(roundKeys.get(1));
             mButton_C.setText(roundKeys.get(2));
             mButton_D.setText(roundKeys.get(3));
+
 
         } else {    // End of game
             Intent intent = new Intent(this, MainActivity.class);

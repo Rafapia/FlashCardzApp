@@ -28,7 +28,7 @@
         android:layout_marginStart="64dp"
         android:layout_marginEnd="64dp"
         android:layout_marginBottom="32dp"
-        android:backgroundTint="@color/colorPrimaryDark"
+        android:background="@color/colorPrimaryDark"
         android:textColor="@color/White"
         android:text="Option A"
         android:onClick="buttonPressed"
@@ -43,7 +43,7 @@
         android:layout_marginStart="64dp"
         android:layout_marginEnd="64dp"
         android:layout_marginBottom="32dp"
-        android:backgroundTint="@color/colorPrimaryDark"
+        android:background="@color/colorPrimaryDark"
         android:textColor="@color/White"
         android:text="Option B"
         android:onClick="buttonPressed"
@@ -58,7 +58,7 @@
         android:layout_marginStart="64dp"
         android:layout_marginEnd="64dp"
         android:layout_marginBottom="32dp"
-        android:backgroundTint="@color/colorPrimaryDark"
+        android:background="@color/colorPrimaryDark"
         android:textColor="@color/White"
         android:text="Option C"
         android:onClick="buttonPressed"
@@ -73,7 +73,7 @@
         android:layout_marginStart="64dp"
         android:layout_marginEnd="64dp"
         android:layout_marginBottom="64dp"
-        android:backgroundTint="@color/colorPrimaryDark"
+        android:background="@color/colorPrimaryDark"
         android:textColor="@color/White"
         android:text="Option D"
         android:onClick="buttonPressed"
@@ -91,6 +91,16 @@
         app:layout_constraintTop_toBottomOf="@+id/button_4"
         android:visibility="invisible"
         android:onClick="resetView"/>
+
+    <TextView
+        android:id="@+id/scoreboard_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="25dp"
+        android:text="Score: 0/0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
