@@ -1,6 +1,8 @@
 package com.example.flashcardz.utils;
 
-public class LinkedList<E> {
+import java.io.Serializable;
+
+public class LinkedList<E> implements Serializable {
     /**
      * Header for the linked list.
      */
@@ -36,6 +38,7 @@ public class LinkedList<E> {
         for (E element: e) {
             this.add(element);
         }
+        return true;
     }
 
     public void addFirst(E e) {
@@ -122,10 +125,12 @@ public class LinkedList<E> {
 
     public E removeFirst() {
         LinkedListNode<E> removedNode = this.nextNode;
-        this.nextNode = this.nextNode.getNextNode();
         this.nodeCount--;
-
-        return removedNode.getData();
+        if (this.nextNode!=null) {
+            this.nextNode = this.nextNode.getNextNode();
+            return removedNode.getData();
+        }
+        return null;
     }
 
     public E set(int index, E e) {

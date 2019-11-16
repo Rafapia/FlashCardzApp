@@ -1,6 +1,8 @@
 package com.example.flashcardz.utils;
 
-public class Queue<E> {
+import java.io.Serializable;
+
+public class Queue<E> implements Serializable {
 
     /* Fields */
     private LinkedList<E> queue;

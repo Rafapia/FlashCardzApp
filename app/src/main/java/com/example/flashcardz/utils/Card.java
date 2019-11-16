@@ -10,6 +10,12 @@ public class Card implements Serializable {
 
 
     /* Methods */
+
+    /**
+     * The contructor for the Card class.
+     * @param key: The key for this Card.
+     * @param definition: The definition of the key.
+     */
     public Card(String key, String definition) {
 
         this.key = key;

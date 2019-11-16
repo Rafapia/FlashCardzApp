@@ -1,6 +1,8 @@
 package com.example.flashcardz.utils;
 
-public class Stack<E> {
+import java.io.Serializable;
+
+public class Stack<E> implements Serializable {
 
     /* Fields */
     private LinkedList<E> stack;
